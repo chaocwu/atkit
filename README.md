@@ -1,5 +1,5 @@
 ## 一个自动化测试小助手
-![image](https://github.com/iamchaoc/alluring/blob/master/public/dashboard.png)
+![image](https://raw.githubusercontent.com/chaocwu/atkit/master/public/atkit.png)
 - 自动化测试指标分析：分析历史自动化测试执行数据，反馈项目执行情况
 - 双向集成测试流水线：集成自动化测试流水线任务回填回归测试（手工+自动化）计划状态
 - 接口变更内容同步：汇总对比版本API同步脚本开发人员及时更新脚本
