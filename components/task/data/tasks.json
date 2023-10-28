@@ -1,0 +1,23 @@
+[
+  {
+    "id": "20231015001",
+    "title": "v1.2.0发布全量测试执行任务",
+    "status": "todo",
+    "label": "all",
+    "priority": "low"
+  },
+  {
+    "id": "20231015002",
+    "title": "v1.2.1功能测试执行任务",
+    "status": "in progress",
+    "label": "hands",
+    "priority": "high"
+  },
+  {
+    "id": "20231015003",
+    "title": "自动化测试定时任务",
+    "status": "done",
+    "label": "auto",
+    "priority": "medium"
+  }
+]

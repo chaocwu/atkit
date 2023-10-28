@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// npm install prisma --save-dev
+// npx prisma init --datasource-provider postgresql
+// npx prisma migrate dev --name init
+// npx prisma db push --force-reset
+// npx prisma studio
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  id       Int    @id @default(autoincrement())
+  title    String
+  label    String
+  status   String @default("todo")
+  priority String @default("high")
+}
