@@ -81,18 +81,6 @@ const flaky = [
     totalAmount: "11",
     paymentMethod: "chaocwu",
   },
-  {
-    invoice: "002",
-    paymentStatus: "使用持续集成 （CI） 服务器时，片状测试特别麻烦",
-    totalAmount: "8",
-    paymentMethod: "chaocwu",
-  },
-  {
-    invoice: "003",
-    paymentStatus: "开发人员可能会对测试结果产生不信任",
-    totalAmount: "7",
-    paymentMethod: "chaocwu",
-  },
 ]
 
 const duration = [
@@ -155,19 +143,7 @@ const duration = [
     paymentStatus: "片状测试表明测试依赖于某些未得到适当控制的系统状态",
     totalAmount: "11",
     paymentMethod: "chaocwu",
-  },
-  {
-    invoice: "002",
-    paymentStatus: "过于严格的断言可能会导致浮点比较问题以及计时问题",
-    totalAmount: "8",
-    paymentMethod: "chaocwu",
-  },
-  {
-    invoice: "003",
-    paymentStatus: "也许另一个测试无法自行清理并留下数据",
-    totalAmount: "7",
-    paymentMethod: "chaocwu",
-  },
+  }
 ]
 
 

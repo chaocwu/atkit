@@ -36,7 +36,7 @@ const data = [
 
 export default function Trending() {
   return (
-    <ResponsiveContainer width="100%" className="xl:min-h-[480px] 2xl:min-h-[520px]">
+    <ResponsiveContainer width="100%" className="xl:min-h-[440px] 2xl:min-h-[480px]">
       <AreaChart data={data}>
         <XAxis allowDataOverflow dataKey="name" tickLine={false} axisLine={false} fontSize={10} />
         <CartesianGrid strokeDasharray="3 3" />
