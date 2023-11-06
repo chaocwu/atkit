@@ -18,6 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { ListTodo, MonitorCheck, Repeat, Hourglass } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const flaky = [
   {
@@ -123,22 +124,28 @@ export default function IndexPage() {
             </p>
           </CardContent>
         </Card>
-        <div className="col-span-2 space-y-4">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0"></CardHeader>
-            <CardContent className="pb-0">
-              <Trending />
-            </CardContent>
-          </Card>
-        </div>
-        <div className="col-span-2 space-y-4">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0"></CardHeader>
-            <CardContent className="pb-0">
-              <Dashboard />
-            </CardContent>
-          </Card>
-        </div>
+        <Tabs defaultValue="trending" className="col-span-2 space-y-4">
+          <TabsList>
+            <TabsTrigger value="trending">趋势</TabsTrigger>
+            <TabsTrigger value="dashboard">分布</TabsTrigger>
+          </TabsList>
+          <TabsContent value="trending">
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0"></CardHeader>
+              <CardContent className="pb-0">
+                <Trending />
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="dashboard">
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0"></CardHeader>
+              <CardContent className="pb-0">
+                <Dashboard />
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
         <div className="col-span-2 space-y-4">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">
@@ -155,34 +162,6 @@ export default function IndexPage() {
                 </TableHeader>
                 <TableBody>
                   {flaky.map((invoice) => (
-                    <TableRow key={invoice.invoice}>
-                      <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                      <TableCell>{invoice.paymentStatus}</TableCell>
-                      <TableCell>{invoice.totalAmount}</TableCell>
-                      <TableCell className="text-right">{invoice.paymentMethod}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-        </div>
-        <div className="col-span-2 space-y-4">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">
-            </CardHeader>
-            <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>序号</TableHead>
-                    <TableHead>用例</TableHead>
-                    <TableHead>耗时</TableHead>
-                    <TableHead className="text-right">作者</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {duration.map((invoice) => (
                     <TableRow key={invoice.invoice}>
                       <TableCell className="font-medium">{invoice.invoice}</TableCell>
                       <TableCell>{invoice.paymentStatus}</TableCell>
