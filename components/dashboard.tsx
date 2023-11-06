@@ -35,7 +35,7 @@ const data = [
 
 export function Dashboard() {
   return (
-    <ResponsiveContainer width="100%" className="xl:min-h-[440px] 2xl:min-h-[490px]">
+    <ResponsiveContainer width="100%" className="xl:min-h-[480px] 2xl:min-h-[520px]">
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis

@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Automation Tools.",
   mainNav: [
     {
-      title: "执行看板",
+      title: "项目概况",
       href: "/",
     },
     {
